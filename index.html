@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div id="container">
+        <a href='#container' id="arrow"><img src="img/arrow.png"></a>
+        <div onclick='responsiveMenu()' class="responsiveMenuButton visible" id="responsiveMenuButton">
+            <img src="img/bars.png" alt="bars">
+        </div>
+            <nav class="responsiveMenu" id="responsiveMenu">
+                <ul onclick="responsiveMenuClosing()">
+                    <li><a href='' id='home'>Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        <header>
+            <div>
+                <h2 class="sectionTitle headerTitle">Denis<br>Novik</h2>
+            </div>
+            <div>
+                <h3 class="">UX | UI designer<br>24 years old, Minsk</h3>
+            </div>
+            <div>
+                <p><a href="page2.html" id="en">ENG</a> | 
+                <a href="" id="ru">RU</a></p>
+            </div>
+        </header>
+        <section id="image">
+            <img src="img/BSPP2266.png" alt="portrait" id="portrait">
+            <img src="img/image_responsive.png" alt="portrait" id="portraitResponsive">
+        </section>
+        <section id="about">
+            <h2 class="sectionTitle">About me</h2>
+            <h3>Hi, I'm Denis – UX/UI designer from Minsk.<br>
+            I'm interested in design and everything connected with it.</h3>
+            <h3>I'm studying at courses "Web and mobile design<br>
+            interfaces" in IT-Academy.</h3><br>
+            <h3>Ready to implement excellent projects<br>
+            with wonderful people.</h3>
+        </section>
+        <section id="skills">
+            <h2 class="sectionTitle">Skills</h2>
+            <h3>I work in such programs as</h3>
+            <div class="programs">
+                <div class="program">
+                    <img src="img/PS.png" alt="photoshop logo">
+                    <h4>Adobe<br>Photoshop</h4>
+                    <div class="programStars">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarEmpty.png" alt="empty star">
+                    </div>
+                </div>
+                <div class="program">
+                    <img src="img/AI.png" alt="illustrator logo">
+                    <h4>Adobe<br>Illustrator</h4>
+                    <div class="programStars">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarEmpty.png" alt="empty star">
+                        <img src="img/StarEmpty.png" alt="empty star">
+                    </div>
+                </div>
+                <div class="program">
+                    <img src="img/AE.png" alt="after effects logo">
+                    <h4>Adobe<br>After Effects</h4>
+                    <div class="programStars">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarEmpty.png" alt="empty star">
+                    </div>
+                </div>
+                <div class="program">
+                    <img src="img/Figma.png" alt="figma logo">
+                    <h4>Figma</h4>
+                    <div class="programStars">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarFilled.png" alt="filled star">
+                        <img src="img/StarEmpty.png" alt="empty star">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2 class="sectionTitle">Portfolio</h2>
+            <article class="portfolioExample">
+                <img src="img/Portfolio_1.png" alt="online fashion store">
+                <a href="">Online fashion store - Homepage</a>
+            </article>
+            <article class="portfolioExample">
+                <img src="img/Portfolio_2.png" alt="reebok store">
+                <a href="">Reebok Store - Concept</a>
+            </article>
+            <article class="portfolioExample">
+                <img src="img/Portfolio_3.png" alt="reebok store">
+                <a href="">Braun Landing Page - Concept</a>
+            </article>
+        </section>
+        <footer id="contacts">
+            <h2 class="sectionTitle">Contacts</h2>
+            <h3>Want to know more or just chat?<br>You are welcome!</h3>
+            <button class="sendMessage">
+                <h4>Send message</h4>
+            </button>
+            <div class="socialMedia">
+                <a href=""><img src="img/linkedin.png" alt="linkedin"></a>
+                <a href=""><img src="img/Instagram.png" alt="instagram"></a>
+                <a href=""><img src="img/Be.png" alt="be"></a>
+                <a href=""><img src="img/Ball.png" alt="ball"></a>
+            </div>
+            <h5>Like me on<br>LinkedIn, Instagram, Behance, Dribble</h5>        
+        </footer>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function(f){
+            var element = f('#arrow');
+            f(window).scroll(function(){
+                element['fade'+ (f(this).scrollTop() > 200 ? 'In': 'Out')](500);           
+            });
+        });
+    </script>
+
+</body>
+</html>
